@@ -1,0 +1,24 @@
+:root {
+    --main-color: #3380CF;
+    --accent-color: #FBFB8C;
+    --font-color: #434343;
+    --muted-color: #E7E7E7;
+}
+
+/* html, body {
+    margin: 0;
+    padding: 0;
+}
+*/ 
+
+button {
+    background-color: #fff;
+    border: none;
+    outline: none;
+}
+
+.page-container {
+    width: 100%;
+    max-width: 50rem;
+    margin: 0 auto;
+}
