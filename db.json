@@ -1,0 +1,388 @@
+{
+  "users": [
+    {
+      "id": 3,
+      "firstName": "Slater",
+      "lastName": "Snow-Man",
+      "birthDate": "08.12.1998",
+      "group": "ИБТ-18-14",
+      "age": 19
+    },
+    {
+      "id": 4,
+      "firstName": "Anastasia",
+      "lastName": "Wilkins",
+      "birthDate": "12.03.1993",
+      "group": "ФФ-20-18",
+      "age": 25
+    },
+    {
+      "id": 5,
+      "firstName": "Peter",
+      "lastName": "Louson",
+      "birthDate": "09.08.1994",
+      "group": "ФФ-15-16",
+      "age": 24
+    },
+    {
+      "id": 6,
+      "firstName": "Reese",
+      "lastName": "Nixon",
+      "birthDate": "05.02.1997",
+      "group": "ИБТ-3-16"
+    },
+    {
+      "id": 7,
+      "firstName": "Leann",
+      "lastName": "Douglas",
+      "birthDate": "11.02.1994",
+      "group": "ФФ-9-15",
+      "age": 24
+    },
+    {
+      "id": 8,
+      "firstName": "Johnson",
+      "lastName": "Sherman",
+      "birthDate": "05.05.1997",
+      "group": "ИБТ-18-14",
+      "age": 21
+    },
+    {
+      "id": 10,
+      "firstName": "Lessie",
+      "lastName": "Mcfarland",
+      "birthDate": "07.01.2000",
+      "group": "ФФ-20-18",
+      "age": 18
+    },
+    {
+      "id": 14,
+      "firstName": "Jacobson",
+      "lastName": "Harmon",
+      "birthDate": "01.10.1998",
+      "group": "ИБТ-18-14",
+      "age": 20
+    },
+    {
+      "id": 18,
+      "firstName": "Decker",
+      "lastName": "Horton",
+      "birthDate": "02.03.1996",
+      "group": "ИСТ-9-14",
+      "age": 22
+    },
+    {
+      "id": 19,
+      "firstName": "Dolly",
+      "lastName": "Frazier",
+      "birthDate": "01.08.2000",
+      "group": "ТИС-11-17",
+      "age": 18
+    },
+    {
+      "id": 20,
+      "firstName": "Brandi",
+      "lastName": "Hawkins",
+      "birthDate": "11.04.2001",
+      "group": "ИБТ-3-16",
+      "age": 17
+    },
+    {
+      "id": 21,
+      "firstName": "Foreman",
+      "lastName": "Washington",
+      "birthDate": "02.05.1998",
+      "group": "ТИС-15-14"
+    },
+    {
+      "id": 22,
+      "firstName": "Bond",
+      "lastName": "Hughes",
+      "birthDate": "02.08.2000",
+      "group": "ТИС-11-17",
+      "age": 18
+    },
+    {
+      "id": 23,
+      "firstName": "Shelia",
+      "lastName": "Alvarado",
+      "birthDate": "26.11.1992",
+      "group": "ИБТ-18-14",
+      "age": 25
+    },
+    {
+      "id": 24,
+      "firstName": "Levine",
+      "lastName": "Villarreal",
+      "birthDate": "03.10.1997",
+      "group": "ИСТ-17-15",
+      "age": 21
+    },
+    {
+      "id": 25,
+      "firstName": "Flowers",
+      "lastName": "Brady",
+      "birthDate": "12.11.1991",
+      "group": "ТИС-15-14",
+      "age": 27
+    },
+    {
+      "id": 26,
+      "firstName": "Griffin",
+      "lastName": "Becker",
+      "birthDate": "03.12.1993",
+      "group": "ФФ-15-16"
+    },
+    {
+      "id": 28,
+      "firstName": "Black",
+      "lastName": "Gentry",
+      "birthDate": "03.06.1997",
+      "group": "ТИС-15-14",
+      "age": 21
+    },
+    {
+      "id": 29,
+      "firstName": "Alicia",
+      "lastName": "Buckley",
+      "birthDate": "08.06.1990",
+      "group": "ФФ-20-18",
+      "age": 28
+    },
+    {
+      "id": 30,
+      "firstName": "Baird",
+      "lastName": "Mays",
+      "birthDate": "10.06.1995",
+      "group": "ИСТ-17-15"
+    },
+    {
+      "id": 31,
+      "firstName": "Alice",
+      "lastName": "Potter",
+      "birthDate": "12.07.2001",
+      "group": "ИБТ-7-18",
+      "age": 17
+    },
+    {
+      "id": 32,
+      "firstName": "Dorothea",
+      "lastName": "Delgado",
+      "birthDate": "12.01.1999",
+      "group": "ФФ-19-17",
+      "age": 19
+    },
+    {
+      "id": 33,
+      "firstName": "Aida",
+      "lastName": "Cooke",
+      "birthDate": "27.08.1991",
+      "group": "ИБТ-3-16",
+      "age": 27
+    },
+    {
+      "id": 34,
+      "firstName": "Shaw",
+      "lastName": "Fitzpatrick",
+      "birthDate": "11.07.1995",
+      "group": "ТИС-15-14",
+      "age": 23
+    },
+    {
+      "id": 36,
+      "firstName": "Annie",
+      "lastName": "Mccormick",
+      "birthDate": "09.04.1998",
+      "group": "ИБТ-18-14"
+    },
+    {
+      "id": 42,
+      "firstName": "Patricia",
+      "lastName": "Hayes",
+      "birthDate": "04.03.1994",
+      "group": "ФФ-15-16",
+      "age": 24
+    },
+    {
+      "id": 43,
+      "firstName": "Hays",
+      "lastName": "Lancaster",
+      "birthDate": "05.01.1999",
+      "group": "ФФ-15-16",
+      "age": 19
+    },
+    {
+      "id": 45,
+      "firstName": "Mcguire",
+      "lastName": "Cantu",
+      "birthDate": "03.04.1995",
+      "group": "ФФ-19-17"
+    },
+    {
+      "id": 48,
+      "firstName": "Mcmillan",
+      "lastName": "Lane",
+      "birthDate": "01.10.1998",
+      "group": "ИСТ-9-14"
+    },
+    {
+      "id": 49,
+      "firstName": "Mullins",
+      "lastName": "Mason",
+      "birthDate": "05.09.1990",
+      "group": "ИБТ-7-18"
+    },
+    {
+      "firstName": "Thomas",
+      "lastName": "Hilton",
+      "age": 19,
+      "birthDate": "28.02.1999",
+      "group": "REF-12-16",
+      "id": 50
+    },
+    {
+      "firstName": "Nick",
+      "lastName": "Hamilton",
+      "age": 18,
+      "birthDate": "01.01.2000",
+      "group": "REF-12-17",
+      "id": 51
+    },
+    {
+      "firstName": "Sophie",
+      "lastName": "Angeles",
+      "age": 18,
+      "birthDate": "01.01.2000",
+      "group": "REF-12-18",
+      "id": 52
+    },
+    {
+      "firstName": "Kevin",
+      "lastName": "Miller",
+      "age": 17,
+      "birthDate": "04.05.2001",
+      "group": "REF-12-16",
+      "id": 53
+    },
+    {
+      "firstName": "James",
+      "lastName": "Horton",
+      "age": 18,
+      "birthDate": "01.01.2000",
+      "group": "REF-12-16",
+      "id": 54
+    },
+    {
+      "firstName": "Patrick",
+      "lastName": "O'Brayen",
+      "age": 18,
+      "birthDate": "01.01.2000",
+      "group": "REF-12-16",
+      "id": 55
+    },
+    {
+      "firstName": "Elena",
+      "lastName": "Miller",
+      "age": 18,
+      "birthDate": "01.01.2000",
+      "group": "REF-12-16",
+      "id": 57
+    },
+    {
+      "firstName": "Steven",
+      "lastName": "Howking",
+      "age": 18,
+      "birthDate": "01.01.2000",
+      "group": "REF-12-16",
+      "id": 59
+    },
+    {
+      "firstName": "Anna",
+      "lastName": "McDown",
+      "age": 18,
+      "birthDate": "01.01.2000",
+      "group": "REF-12-16",
+      "id": 60
+    },
+    {
+      "firstName": "Anna",
+      "lastName": "Howking",
+      "age": 18,
+      "birthDate": "01.01.2000",
+      "group": "REF-12-16",
+      "id": 61
+    },
+    {
+      "firstName": "Mark",
+      "lastName": "Kollin",
+      "age": 18,
+      "birthDate": "01.01.2000",
+      "group": "REF-12-16",
+      "id": 63
+    },
+    {
+      "firstName": "Oliver",
+      "lastName": "Walley",
+      "age": 18,
+      "birthDate": "01.01.2000",
+      "group": "REF-12-16",
+      "id": 64
+    },
+    {
+      "firstName": "Julie",
+      "lastName": "Hamfry",
+      "age": 18,
+      "birthDate": "01.01.2000",
+      "group": "ИБТ-18-14",
+      "id": 66
+    },
+    {
+      "firstName": "Katherine",
+      "lastName": "Wilkinson",
+      "age": 18,
+      "birthDate": "01.01.2000",
+      "group": "ИБТ-18-14",
+      "id": 67
+    },
+    {
+      "firstName": "Ashley",
+      "lastName": "Wilkinson",
+      "age": 18,
+      "birthDate": "01.01.2000",
+      "group": "ИБТ-18-14",
+      "id": 68
+    },
+    {
+      "firstName": "Adam",
+      "lastName": "Jennkins",
+      "age": 18,
+      "birthDate": "01.01.2000",
+      "group": "ИБТ-18-14",
+      "id": 69
+    },
+    {
+      "firstName": "Mia",
+      "lastName": "Nanki",
+      "age": 18,
+      "birthDate": "01.01.2000",
+      "group": "AA-12-18",
+      "id": 70
+    },
+    {
+      "firstName": "Maya",
+      "lastName": "Khoa",
+      "age": 18,
+      "birthDate": "01.01.2000",
+      "group": "AA-12-18",
+      "id": 71
+    },
+    {
+      "firstName": "Mia",
+      "lastName": "Naboa",
+      "age": 18,
+      "birthDate": "01.01.2000",
+      "group": "AA-12-18",
+      "id": 72
+    }
+  ]
+}

@@ -57,6 +57,7 @@ export default {
       type: Array,
       required: true
     },
+    // количество найденных совпадений
     size: {
       type: Number,
       required: true
@@ -81,6 +82,7 @@ export default {
   },
 
   computed: {
+    // названия групп
     groups() {
       //проверить, что быстрее
       //return [...new Set(this.data.map(item => item.group).sort())]
@@ -89,12 +91,15 @@ export default {
         .sort()
         .filter((item, index, data) => item !== data[index - 1])
     },
+    // возрастные категории
     ages() {
       return Object.keys(this.agesMap)
     },
+    // все фильтры, которые будут применены при выводе списка пользователей
     filters() {
       return Object.values(this.filterMap).filter(item => typeof item === 'function')
     },
+    // предупреждение, если пользователи не найдены
     warning() {
       return !this.size
     }
@@ -126,7 +131,7 @@ export default {
       this.sorter = sorter
       this.updateData()
     },
-    
+    // объединенный фильтр для фильтрации списка пользователей
     combinedFilter() {
       return combineFilters(this.filters)
     }

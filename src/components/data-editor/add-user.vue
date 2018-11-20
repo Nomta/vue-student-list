@@ -1,6 +1,6 @@
 <template>
     <edit-form 
-        :data="person"
+        :data="user"
         button-text="Добавить"
         @submit="postData"
     />
@@ -10,7 +10,7 @@ import axios from '@/axios.js'
 import EditForm from './edit-form.vue'
 
 export default {
-    name: 'AddPerson',
+    name: 'AddUser',
 
     components: {
         EditForm
@@ -25,7 +25,7 @@ export default {
 
     data() {
         return {
-            person: {
+            user: {
                 firstName: '', 
                 lastName: '', 
                 age: 0, 
@@ -36,11 +36,10 @@ export default {
     },
 
     methods: {
-        postData(person) {
-            this.$emit('submit', person)
+        postData(user) {
+            this.$emit('submit', user)
             axios
-              .post(this.url, person)
-              .then(response => console.log(response.statusText, person))
+              .post(this.url, user)
               .catch(error => console.error(error)) 
         }
     }

@@ -1,12 +1,12 @@
 <template>
-    <div class="person-list">
-        <button class="person-list__button" @click="addItem">
+    <div class="user-list">
+        <button class="user-list__button" @click="addItem">
             Добавить
         </button>
-        <button class="person-list__button" @click="removeItems">
+        <button class="user-list__button" @click="removeItems">
             Удалить
         </button>
-        <person-table 
+        <user-table 
             v-model="selected"
             :data="data"
             @click="linkToEdit"
@@ -17,13 +17,13 @@
 
 <script>
 
-import personTable from './person-table.vue'
+import UserTable from './user-table.vue'
 
 export default {
-    name: 'PersonList',
+    name: 'UserList',
 
     components: {
-        personTable
+        UserTable
     },
 
     props: {
@@ -40,14 +40,15 @@ export default {
     },
 
     methods: {
-        linkToEdit(person) {
-            this.$emit('link', person)
+        // переход на редактирование пользователя
+        linkToEdit(user) {
+            this.$emit('link', user)
         },
-        
+        // добавить пользователя
         addItem() {
             this.$emit('add')
         },
-
+        // удалить выбранных пользователей
         removeItems() {
             this.$emit('remove', this.selected)
         }

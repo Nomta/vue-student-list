@@ -1,6 +1,6 @@
 <template>
    <form class="edit-form" :class="{ 'edit-form--active': isActive }">
-       <h2> {{ person.firstName }} {{ person.lastName }} </h2>
+       <h2> {{ user.firstName }} {{ user.lastName }} </h2>
        <ul class="edit-form__outer">
        
            <li class="edit-form__item">
@@ -8,17 +8,17 @@
                 <input type="text"
                     class="edit-form__input"
                     :class="{ 
-                        'edit-form__input--invalid':  $v.person.firstName.$invalid 
+                        'edit-form__input--invalid':  $v.user.firstName.$invalid 
                     }"
-                    v-model.trim="person.firstName"
+                    v-model.trim="user.firstName"
                 />
                 <p 
                     class="edit-form__error-message" 
-                    v-show="!$v.person.firstName.required"
+                    v-show="!$v.user.firstName.required"
                 > Поле "Имя" обязательно для заполнения </p>
                 <p 
                     class="edit-form__error-message" 
-                    v-show="!$v.person.firstName.alpha"
+                    v-show="!$v.user.firstName.alpha"
                 > Проверьте правильность написания имени </p>
             </li>
 
@@ -27,24 +27,24 @@
                 <input type="text"
                     class="edit-form__input"
                     :class="{ 
-                        'edit-form__input--invalid':  $v.person.lastName.$invalid 
+                        'edit-form__input--invalid':  $v.user.lastName.$invalid 
                     }"
-                    v-model.trim="person.lastName"
+                    v-model.trim="user.lastName"
                 />
                 <p 
                     class="edit-form__error-message" 
-                    v-show="!$v.person.lastName.required"
+                    v-show="!$v.user.lastName.required"
                 > Поле "Фамилия" обязательно для заполнения </p>
                 <p 
                     class="edit-form__error-message" 
-                    v-show="!$v.person.lastName.alpha"
+                    v-show="!$v.user.lastName.alpha"
                 > Проверьте правильность написания фамилии </p>
             </li>
 
             <li class="edit-form__item">
                 <label for="">Дата рождения*</label>
                 <datepicker 
-                    v-model="person.birthDate"
+                    v-model="user.birthDate"
                 />
             </li>
 
@@ -53,22 +53,22 @@
                 <input type="text"
                     class="edit-form__input"
                     :class="{ 
-                        'edit-form__input--invalid':  $v.person.group.$invalid 
+                        'edit-form__input--invalid':  $v.user.group.$invalid 
                     }"
-                    v-model.trim="person.group"
+                    v-model.trim="user.group"
                 />
                 <p 
                     class="edit-form__error-message" 
-                    v-show="!$v.person.group.required"
+                    v-show="!$v.user.group.required"
                 > Поле "Группа" обязательно для заполнения </p>
                 <p 
                     class="edit-form__error-message" 
-                    v-show="!$v.person.group.group"
+                    v-show="!$v.user.group.group"
                 > Название группы задано некорректно. </p>  
             </li>
 
         </ul>
-       <input type="submit" @click.prevent="saveData(person)" :value="buttonText">
+       <input type="submit" @click.prevent="saveData(user)" :value="buttonText">
    </form>
 </template>
 
@@ -79,10 +79,11 @@ import { required, helpers } from 'vuelidate/lib/validators'
 
 Vue.use(Vuelidate)
 
+// validation patterns
 const group = helpers.regex('', /^[A-ZА-Я]{2,4}-\d{1,2}-\d{2}$/)
 const alpha = helpers.regex('', /^[A-zА-я\-\'ёЁ]+$/)
 
-import { getAge } from '@/helpers.js'
+import { getAge, capitalize } from '@/helpers.js'
 
 export default {
   name: 'edit-form',
@@ -104,14 +105,16 @@ export default {
 
   data() {
     return {
-      person: Object.assign({}, this.data),
+    // локальный пользователь
+      user: Object.assign({}, this.data),
+    // форма неактивна до первого submit
       isActive: false
     }
   },
 
   validations: {
       // валидируемые поля
-      person: { 
+      user: { 
         firstName: { required, alpha },
         lastName: { required, alpha },
         group: { required, group }
@@ -119,12 +122,14 @@ export default {
   },
 
     methods: {
-        saveData(person) {
+        saveData(user) {
             this.isActive = true
             if (!this.$v.$invalid) {
                 this.isValid = true
-                this.person.age  = getAge(this.person.birthDate)
-                this.$emit('submit', person)
+                this.user.firstName = capitalize(this.user.firstName)
+                this.user.lastName = capitalize(this.user.lastName)
+                this.user.age  = getAge(this.user.birthDate)
+                this.$emit('submit', user)
             }
         }
     }

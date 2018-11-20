@@ -31,6 +31,7 @@ export default {
 
   data() {
     return {
+      // функция сортировки, в зависимости от типа данных для сравнения
       sorter: 
         this.type === 'string' ?
           (a, b) => a[this.prop].localeCompare(b[this.prop]) :
@@ -42,7 +43,6 @@ export default {
 
   methods: {
     sortData() {
-      //console.log('from sorter: ', this.sorter)
       this.$emit('sort', this.sorter)
     }
   }

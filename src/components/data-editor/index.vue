@@ -1,6 +1,6 @@
 <template>
-    <edit-person v-if="data" :data="data" :url="url" @submit="exit"/>
-    <add-person v-else :url="url" @submit="exit"/>
+    <edit-user v-if="data" :data="data" :url="url" @submit="saveUser"/>
+    <add-user v-else :url="url" @submit="saveUser"/>
 </template>
 
 <script>
@@ -9,8 +9,8 @@ export default {
     name: 'DataEditor',
 
     components: {
-        EditPerson: () => import('./edit-person.vue'),
-        AddPerson: () => import('./add-person.vue')
+        EditUser: () => import('./edit-user.vue'),
+        AddUser: () => import('./add-user.vue')
     },
     
     props: {
@@ -25,8 +25,8 @@ export default {
     },
 
     methods: {
-        exit(person) {
-            this.$emit('submit', person)
+        saveUser(user) {
+            this.$emit('submit', user)
         }
     }
 }

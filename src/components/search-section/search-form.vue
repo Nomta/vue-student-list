@@ -14,7 +14,6 @@
     >
       
     </button>
-    <!-- <input type="submit" class="search-section__button"> -->
     <p class="search-section__warning-message" v-if="warning">
       Совпадений не найдено
     </p>
@@ -43,9 +42,6 @@ export default {
   methods: {
     filterData() {
       this.$emit('filter', item => filter(item[this.prop], this.value))
-      // this.$emit('filter', item => {
-      //   return filter(item[this.key], this.value) ? item : null
-      // })
     }
   }
 }

@@ -10,7 +10,7 @@ import axios from '@/axios.js'
 import EditForm from './edit-form.vue'
 
 export default {
-    name: 'EditPerson',
+    name: 'EditUser',
 
     components: {
         EditForm
@@ -28,10 +28,10 @@ export default {
     },
 
     methods: {
-        postData(person) {
-            this.$emit('submit', person)
+        postData(user) {
+            this.$emit('submit', user)
             axios
-              .put(this.url + person.id, person)
+              .put(this.url + user.id, user)
               .catch(error => console.error(error)) 
             }
     }

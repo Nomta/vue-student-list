@@ -8,7 +8,7 @@
         :size="selected.length"
         @update="filterData"
       />
-      <person-list 
+      <user-list 
         v-if="data"
         :data="selected"
         @add="openEditor" 
@@ -17,7 +17,7 @@
       />
       <modal-window v-if="opened" @close="hideModal">
         <data-editor 
-          :data="person" 
+          :data="user" 
           :url="url"
           @submit="updateData"
         />
@@ -31,14 +31,14 @@ import axios from '@/axios.js'
 import { getAge } from '@/helpers.js'
 
 import SearchSection from '@/components/search-section'
-import PersonList from '@/components/person-list'
+import UserList from '@/components/user-list'
 
 export default {
   name: 'App',
 
   components: {
     SearchSection,
-    PersonList,
+    UserList,
     ModalWindow: () => import('@/components/modal-window'),
     DataEditor: () => import('@/components/data-editor')
   },
@@ -46,22 +46,19 @@ export default {
   data() {
     return {
       opened: false,
-      person: null,
+      user: null,
       data: null,
       url: '/users/',
       filter(item) {
         return item
       },
-      // search(item) {
-      //   return item
-      // },
       sort() {}
     }
   },
 
   computed: {
+    // отсортированные данные
     selected() {
-      //console.log('FILTER')
       return this.data
         .filter(this.filter)
         .sort(this.sort)
@@ -73,33 +70,33 @@ export default {
   },
 
   methods: {
-    openEditor(person) {
-      if (person) {
-        this.person = person
+    // открыть форму на редактирование
+    openEditor(user) {
+      if (user) {
+        this.user = user
       }
       this.opened = true
     },
-
+    // скрыть форму
     hideModal() {
       this.opened = false
-      this.person = null
+      this.user = null
     },
-
+    // удаление выбранных пользователей
     removeItems(selected) {
       selected.forEach(id => {
         axios
           .delete('/users/' + id)
-          .then(() => (this.data = this.data.filter(person => person.id !== id)))
-          .catch(error => console.log(error))
+          .then(() => (this.data = this.data.filter(user => user.id !== id)))
+          .catch(error => console.error(error))
       })
     },
-
-    filterData(filter, sort) {    // (search, filter, sort)
-      //this.search = search
+    // фильтрация вывода
+    filterData(filter, sort) { 
       this.filter = filter
       this.sort = sort
     },
-
+    // загрузка данных
     loadData() {
       axios
         .get('/users')
@@ -110,13 +107,13 @@ export default {
         })
         .catch(error => console.error(error))
     },
-
-    updateData(person) {
-      let index = this.data.indexOf(this.person)
+    // обновление списка после добавления или редактирования пользователя
+    updateData(user) {
+      let index = this.data.indexOf(this.user)
       if (index > -1) {
-        this.data.splice(index, 1, person)
+        this.data.splice(index, 1, user)
       } else {
-        this.data.push(person)
+        this.data.push(user)
       }
       this.hideModal()
     }

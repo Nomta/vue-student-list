@@ -66,10 +66,7 @@ export default {
       this.title = item
       this.openList()
     },
-    // filterData(key) {
-    //   //console.log(this.prop, item[this.prop], key)
-    //   //this.$emit('filter', item => item[this.prop] === key)
-    // },
+    
     openList() {
       this.listOpened = !this.listOpened
     }

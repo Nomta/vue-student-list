@@ -1,22 +1,28 @@
 {
-  "name": "students",
+  "name": "vue-student-list",
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint"
+    "serve": "vue-cli-service serve --fix",
+    "build": "vue-cli-service build --modern",
+    "lint": "vue-cli-service lint",
+    "start": "json-server --watch db.json"
   },
   "dependencies": {
-    "vue": "^2.5.17"
+    "axios": "^0.18.0",
+    "flatpickr": "^4.5.2",
+    "vue": "^2.5.17",
+    "vuelidate": "^0.7.4"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "^3.0.3",
     "@vue/cli-plugin-eslint": "^3.0.3",
     "@vue/cli-service": "^3.0.3",
+    "@vue/eslint-config-prettier": "^4.0.1",
     "babel-eslint": "^10.0.1",
     "eslint": "^5.8.0",
     "eslint-plugin-vue": "^5.0.0-0",
+    "postcss-preset-env": "^6.4.0",
     "vue-template-compiler": "^2.5.17"
   },
   "eslintConfig": {
@@ -25,16 +31,20 @@
       "node": true
     },
     "extends": [
-      "plugin:vue/essential",
+      "plugin:vue/recommended",
+      "@vue/prettier",
       "eslint:recommended"
     ],
-    "rules": {},
+    "rules": {
+       "no-console": "off"
+    },
     "parserOptions": {
       "parser": "babel-eslint"
     }
   },
   "postcss": {
     "plugins": {
+      "postcss-preset-env": {},
       "autoprefixer": {}
     }
   },
@@ -42,5 +52,14 @@
     "> 1%",
     "last 2 versions",
     "not ie <= 8"
-  ]
+  ],
+  "prettier": {
+    "printWidth": 100,
+    "tabWidth": 2,
+    "useTabs": false,
+    "semi": false,
+    "singleQuote": true,
+    "trailingComma": "none",
+    "bracketSpacing": true
+  }
 }
