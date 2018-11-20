@@ -4,6 +4,8 @@ import '@/styles/style.css'
 
 Vue.config.productionTip = false
 
-new Vue({
-  render: h => h(App),
+var app = new Vue({
+  render: h => h(App)
 }).$mount('#app')
+
+export default app

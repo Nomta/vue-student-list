@@ -1,13 +1,17 @@
 <template>
     <div class="person-list">
+        <button class="person-list__button" @click="addItem">
+            Добавить
+        </button>
+        <button class="person-list__button" @click="removeItems">
+            Удалить
+        </button>
         <person-table 
             v-model="selected"
             :data="data"
             @click="linkToEdit"
+            @keyup.delete="removeItems"
         />
-        <button class="person-list__button" @click="removeItems">
-            Удалить
-        </button>
     </div>
 </template>
 
@@ -38,6 +42,10 @@ export default {
     methods: {
         linkToEdit(person) {
             this.$emit('link', person)
+        },
+        
+        addItem() {
+            this.$emit('add')
         },
 
         removeItems() {

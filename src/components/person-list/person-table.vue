@@ -30,7 +30,6 @@
   </table>
 </template>
 <script>
-
 export default {
   name: 'PersonTable',
 
@@ -48,16 +47,16 @@ export default {
       required: true
     }
   },
-  
+
   methods: {
     select(id) {
-      this.isChecked(id) ?
-        this.selected.splice(this.selected.indexOf(id), 1) :
-        this.selected.push(id)
+      this.isChecked(id)
+        ? this.selected.splice(this.selected.indexOf(id), 1)
+        : this.selected.push(id)
     },
 
     change(person) {
-      this.$emit('click', person) 
+      this.$emit('click', person)
     },
 
     isChecked(id) {
@@ -67,7 +66,7 @@ export default {
 }
 </script>
 <style>
-  .person-table__row--active {
-    color: red;
-  }
+.person-table__row--active {
+  color: red;
+}
 </style>

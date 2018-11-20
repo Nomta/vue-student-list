@@ -16,9 +16,7 @@ export default {
     props: {
         data: {
             type: Object,
-            default() {
-                return {}
-            }
+            required: false
         },
         url: {
             type: String,
