@@ -1,6 +1,6 @@
 // получение возраста по дате рождения
 // из строки вида "dd.mm.yyyy"
-const getAge = function (date) {
+const getAge = function(date) {
   let dateString = date.slice(3, 6) + date.slice(0, 3) + date.slice(6)
   let today = new Date()
   let birthDate = new Date(dateString)
@@ -25,8 +25,4 @@ const combineFilters = function(filters) {
   }
 }
 
-export {
-  getAge,
-  capitalize,
-  combineFilters
-}
+export { getAge, capitalize, combineFilters }

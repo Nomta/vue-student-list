@@ -4,30 +4,29 @@
 </template>
 
 <script>
-
 export default {
-    name: 'DataEditor',
+  name: 'DataEditor',
 
-    components: {
-        EditUser: () => import('./edit-user.vue'),
-        AddUser: () => import('./add-user.vue')
-    },
-    
-    props: {
-        data: {
-            type: Object,
-            required: false
-        },
-        url: {
-            type: String,
-            default: '/'
-        }
-    },
+  components: {
+    EditUser: () => import('./edit-user.vue'),
+    AddUser: () => import('./add-user.vue')
+  },
 
-    methods: {
-        saveUser(user) {
-            this.$emit('submit', user)
-        }
+  props: {
+    data: {
+      type: Object,
+      default: null
+    },
+    url: {
+      type: String,
+      default: '/'
     }
+  },
+
+  methods: {
+    saveUser(user) {
+      this.$emit('submit', user)
+    }
+  }
 }
 </script>

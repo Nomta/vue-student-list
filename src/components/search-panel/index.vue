@@ -1,10 +1,13 @@
 <template>
-    <div class="search-section">
+    <div class="search-panel">
         <search-form
+            class="search search-panel__form"
             :warning="warning"
             @filter="filterData"
-        >
+          >
+          <div class="search__search-filters page-button-group">
             <search-filter
+              class="search__search-filter"
               :data="groups"
               prop="group"
               title-text="Выбрать группу"
@@ -12,39 +15,32 @@
               @select="filterByGroup"
             />
             <search-filter
+              class="search__search-filter"
               :data="ages"
               prop="age"
               title-text="Выбрать возраст"
               reset-text="Любой возраст"
               @select="filterByAge"
             />
+          </div>
         </search-form>
-        <div class="search-section__sorting">
-            <search-sorter
-              title-text="по фамилии"
-              prop="lastName"
-              type="string"
-              @sort="sortData"
-            />
-            <search-sorter
-              title-text="по возрасту"
-              prop="age"
-              type="number"
-              @sort="sortData"
-            />
-        </div>
+      
+        <search-sorter 
+          class="search-panel__sorting"
+          @sort="sortData"
+        />
     </div>
 </template>
 
 <script>
 import SearchForm from './search-form.vue'
 import SearchFilter from './search-filter.vue'
-import SearchSorter from './search-sorter.vue'
+import SearchSorter from './search-sorter/index.vue'
 
 import { combineFilters } from '@/helpers.js'
 
 export default {
-  name: 'SearchSection',
+  name: 'SearchPanel',
 
   components: {
     SearchForm,
@@ -111,14 +107,12 @@ export default {
     },
 
     filterByGroup(group) {
-      this.filterMap.byGroup = this.groups.includes(group) ? 
-        item => item.group === group : null
+      this.filterMap.byGroup = this.groups.includes(group) ? item => item.group === group : null
       this.updateData()
     },
 
     filterByAge(age) {
-      this.filterMap.byAge = this.ages.includes(age) ? 
-        item => this.agesMap[age](item.age) : null
+      this.filterMap.byAge = this.ages.includes(age) ? item => this.agesMap[age](item.age) : null
       this.updateData()
     },
 
@@ -140,9 +134,27 @@ export default {
 </script>
 
 <style>
-.search-section button {
-  border: 3px solid var(--muted-color);
-  padding: 0.5rem 2.5rem;
+.search-panel {
+  padding: 0.5rem 0;
+  border-bottom: 2px solid var(--muted-color);
+}
+.search__search-filters {
+  flex-grow: 2;
+  border: 2px solid var(--main-color);
+}
+.search-panel__sorting {
+  margin: 1.5rem auto 1rem;
+}
+
+@media screen and (max-width: 639px) {
+  .search-panel__form,
+  .search-panel__sorting {
+    width: 100%;
+  }
+  .search__search-filters {
+    width: 100%;
+    order: 1;
+    margin-top: -2px;
+  }
 }
 </style>
-

@@ -32,14 +32,6 @@
       "group": "ИБТ-3-16"
     },
     {
-      "id": 7,
-      "firstName": "Leann",
-      "lastName": "Douglas",
-      "birthDate": "11.02.1994",
-      "group": "ФФ-9-15",
-      "age": 24
-    },
-    {
       "id": 8,
       "firstName": "Johnson",
       "lastName": "Sherman",
@@ -64,22 +56,6 @@
       "age": 20
     },
     {
-      "id": 18,
-      "firstName": "Decker",
-      "lastName": "Horton",
-      "birthDate": "02.03.1996",
-      "group": "ИСТ-9-14",
-      "age": 22
-    },
-    {
-      "id": 19,
-      "firstName": "Dolly",
-      "lastName": "Frazier",
-      "birthDate": "01.08.2000",
-      "group": "ТИС-11-17",
-      "age": 18
-    },
-    {
       "id": 20,
       "firstName": "Brandi",
       "lastName": "Hawkins",
@@ -95,14 +71,6 @@
       "group": "ТИС-15-14"
     },
     {
-      "id": 22,
-      "firstName": "Bond",
-      "lastName": "Hughes",
-      "birthDate": "02.08.2000",
-      "group": "ТИС-11-17",
-      "age": 18
-    },
-    {
       "id": 23,
       "firstName": "Shelia",
       "lastName": "Alvarado",
@@ -112,7 +80,7 @@
     },
     {
       "id": 24,
-      "firstName": "Levine",
+      "firstName": "Lewis",
       "lastName": "Villarreal",
       "birthDate": "03.10.1997",
       "group": "ИСТ-17-15",
@@ -161,7 +129,7 @@
       "firstName": "Alice",
       "lastName": "Potter",
       "birthDate": "12.07.2001",
-      "group": "ИБТ-7-18",
+      "group": "ИБТ-3-16",
       "age": 17
     },
     {
@@ -169,7 +137,7 @@
       "firstName": "Dorothea",
       "lastName": "Delgado",
       "birthDate": "12.01.1999",
-      "group": "ФФ-19-17",
+      "group": "ФФ-15-16",
       "age": 19
     },
     {
@@ -212,25 +180,12 @@
       "age": 19
     },
     {
-      "id": 45,
-      "firstName": "Mcguire",
-      "lastName": "Cantu",
-      "birthDate": "03.04.1995",
-      "group": "ФФ-19-17"
-    },
-    {
       "id": 48,
       "firstName": "Mcmillan",
       "lastName": "Lane",
       "birthDate": "01.10.1998",
-      "group": "ИСТ-9-14"
-    },
-    {
-      "id": 49,
-      "firstName": "Mullins",
-      "lastName": "Mason",
-      "birthDate": "05.09.1990",
-      "group": "ИБТ-7-18"
+      "group": "ИСТ-17-15",
+      "age": 20
     },
     {
       "firstName": "Thomas",
@@ -383,6 +338,46 @@
       "birthDate": "01.01.2000",
       "group": "AA-12-18",
       "id": 72
+    },
+    {
+      "firstName": "David",
+      "lastName": "Brennon",
+      "age": 18,
+      "birthDate": "01.01.2000",
+      "group": "REF-12-16",
+      "id": 74
+    },
+    {
+      "firstName": "Kate",
+      "lastName": "Flemming",
+      "age": 18,
+      "birthDate": "01.01.2000",
+      "group": "REF-12-16",
+      "id": 75
+    },
+    {
+      "firstName": "James",
+      "lastName": "McMillan",
+      "age": 18,
+      "birthDate": "01.01.2000",
+      "group": "REF-12-17",
+      "id": 76
+    },
+    {
+      "firstName": "Edith",
+      "lastName": "Rassel",
+      "age": 18,
+      "birthDate": "01.01.2000",
+      "group": "REF-12-17",
+      "id": 77
+    },
+    {
+      "firstName": "Anna",
+      "lastName": "Shermann",
+      "age": 18,
+      "birthDate": "01.01.2000",
+      "group": "REF-12-17",
+      "id": 78
     }
   ]
 }

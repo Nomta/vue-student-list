@@ -1,8 +1,8 @@
 <template>
   <div id="app">
     <div class="page-container">
-      <h1>Студенты</h1>
-      <search-section
+      <h1 class="page-heading">Студенты</h1>
+      <search-panel
         v-if="data"
         :data="data"
         :size="selected.length"
@@ -30,17 +30,19 @@
 import axios from '@/axios.js'
 import { getAge } from '@/helpers.js'
 
-import SearchSection from '@/components/search-section'
+import SearchPanel from '@/components/search-panel'
 import UserList from '@/components/user-list'
+import ModalWindow from '@/components/modal-window'
+import DataEditor from '@/components/data-editor'
 
 export default {
   name: 'App',
 
   components: {
-    SearchSection,
+    SearchPanel,
     UserList,
-    ModalWindow: () => import('@/components/modal-window'),
-    DataEditor: () => import('@/components/data-editor')
+    ModalWindow,
+    DataEditor
   },
 
   data() {
@@ -59,9 +61,7 @@ export default {
   computed: {
     // отсортированные данные
     selected() {
-      return this.data
-        .filter(this.filter)
-        .sort(this.sort)
+      return this.data.filter(this.filter).sort(this.sort)
     }
   },
 
@@ -92,7 +92,7 @@ export default {
       })
     },
     // фильтрация вывода
-    filterData(filter, sort) { 
+    filterData(filter, sort) {
       this.filter = filter
       this.sort = sort
     },
@@ -119,8 +119,4 @@ export default {
     }
   }
 }
-
 </script>
-
-<style>
-</style>

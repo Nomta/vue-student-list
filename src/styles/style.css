@@ -1,20 +1,33 @@
+/* variables */
+
 :root {
-    --main-color: #3380CF;
-    --accent-color: #FBFB8C;
+    --main-color: #3380AF;
+    --accent-color: #FEFEC7;
     --font-color: #434343;
-    --muted-color: #E7E7E7;
+    --muted-color: #D7D7D7;
+    --light-color: #F7F7F7;
 }
 
-/* html, body {
-    margin: 0;
-    padding: 0;
+/* reset */
+
+html {
+    font-family: sans-serif;
 }
-*/ 
+
+html * {
+     box-sizing: border-box;
+     /* color: var(--main-color); */
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
 
 button {
-    background-color: #fff;
     border: none;
     outline: none;
+    background-color: #fff;
     cursor: pointer;
 }
 
@@ -24,8 +37,30 @@ ul {
     padding: 0;
 }
 
+/* common styles */
+
 .page-container {
     width: 100%;
     max-width: 50rem;
-    margin: 0 auto;
+    margin: 2rem auto;
+}
+
+.page-heading {
+    color: var(--main-color);
+}
+
+.page-button-group {
+    display: flex;
+    flex-grow: 1;
+    border: 2px solid var(--muted-color);
+    background-color: var(--muted-color);
+}
+
+.page-button-group__item {
+    height: 3rem;
+    flex-grow: 1;
+}
+
+.page-button-group__item:not(:last-of-type) {
+    margin-right: 2px;
 }
